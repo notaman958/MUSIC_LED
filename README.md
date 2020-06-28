@@ -7,7 +7,7 @@ however, things were delayed more than a month because of online shipment. Fortu
 
 As an amateur in Electronics, I welcome any contributions or criticism about my work if there are errors and misunderstandings
 
-Detail of components:
+<i>Detail of components:</i>
 
 Arduino UNO
 
