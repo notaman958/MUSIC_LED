@@ -20,6 +20,7 @@ As an amateur in Electronics, I welcome any contributions or criticism about my 
 <li>Resistor 300Ohm</li>
 
 <li>Led strip WS2812 5m 5V</li>
+
 ## Updated version 2 # Iot music led with raspi 3 (21/12/2020)
 ### Folder: updated_v2
  - Raspi 3 
