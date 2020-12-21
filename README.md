@@ -33,7 +33,7 @@ As an amateur in Electronics, I welcome any contributions or criticism about my 
  - UART communication between raspi and arduino
  - arduino activate the command on led strip
 ### Up comming features
- -[ ] Search music with voice
+ - [ ] Search music with voice
 
 Check out my code and documentation at folder MUSIC_LED/music_led.ino <br/>
 Demo Video: <br/>
