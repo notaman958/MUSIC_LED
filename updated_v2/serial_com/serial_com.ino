@@ -56,6 +56,7 @@ int here;                           // here to keep the bar moving when beat is 
 int plus;
 static int var=0;
 static int var1=170;
+static int var2=0;
 //////////////////////////////MAIN FUCNTION/////////////////////////////////
   void DJPlay()
 { 
@@ -179,14 +180,13 @@ void snakeRun_backward(uint32_t color, int v)
 }
 void FireWork(uint32_t color, int middle_point, int times)
 {
-  for(int i=0;i<times*10-4;i++)
+  for(int i=0;i<times*25;i++)
   {
        strip.setPixelColor(middle_point+i,color);
        strip.setPixelColor(middle_point,dark_cyan);
        strip.setPixelColor(middle_point-i,color);
-  }
-    
     strip.show();
+  }
   
 }
 
@@ -229,13 +229,15 @@ void Show1()
 void Show2()
 {
   
-  if(currentTime-preTime>=time_wait_2)
+   FireWork(green_neon,76,var2);
+  if(currentTime-preTime>=time_wait*10)
   {
-    FireWork(green_neon,114,var1);
-    var1++;
+    //delay(1000);
+    var2++;
     strip.clear();
-    if(var1==5)
-    var1=0;
+    if(var2==5)
+    var2=0;
+    preTime=currentTime;
   }
 }
 
@@ -287,14 +289,18 @@ void SnakeRunUpdated()
       Serial.println(temp_value);
       }
     }
-    if(temp_value=="ON")
+     if(temp_value=="ON"||temp_value=="on")
       return 1; // led white
-    else if(temp_value=="OFF")
+    else if(temp_value=="OFF"||temp_value=="off")
       return 0;
-    else if(temp_value=="MUSIC")
+    else if(temp_value=="MUSIC"||temp_value=="music")
       return 2;
-    else if(temp_value=="SNAKE")
+    else if(temp_value=="SNAKE"||temp_value=="snake")
       return 3;
+    else if(temp_value=="RAINBOW"||temp_value=="rainbow")
+      return 4;
+    else if(temp_value=="FIREWORK"||temp_value=="firework")
+      return 5;
 
   }
 }
@@ -313,22 +319,30 @@ void loop() {
   }
     //Serial.println(option);
    switch(option)
-    {
-      case 0:
-        strip.clear();
-        strip.show();
-        break;
-      case 1:
-        strip.clear();
-        strip.fill(white,here,150);                        // Set pixel 'c' to value 'color'
-        strip.show();
-        break;
-      case 2:
-        DJPlay();
-        break;
-      case 3:
-        SnakeRunUpdated();
-        break;
-    }
+      {
+        case 0:
+          strip.clear();
+          strip.show();
+          break;
+        case 1:
+          strip.clear();
+          strip.fill(white,here,150);                        // Set pixel 'c' to value 'color'
+          strip.show();
+          break;
+        case 2:
+          DJPlay();
+          break;
+        case 3:
+          SnakeRunUpdated();
+          break;
+        case 4:
+          //Serial.print("PALY");
+          Show1();
+          break;
+        case 5:
+          Show2();
+          break;
+        default: break;
+      }
   
 }
