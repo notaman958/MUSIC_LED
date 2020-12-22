@@ -21,6 +21,11 @@ As an amateur in Electronics, I welcome any contributions or criticism about my 
 
 <li>Led strip WS2812 5m 5V</li>
 
+Check out my code and documentation at folder MUSIC_LED/music_led.ino <br/>
+Demo Video: <br/>
+https://drive.google.com/file/d/1euAfPfX0qwzw--25zEl52kjKdtAcKfL8/view?usp=sharing <br/>
+https://drive.google.com/file/d/1FwyniIQ_AvyIb_1d-182hGVKnOJUUPfT/view?usp=sharing <br/>
+
 ## Updated version 2 # Iot music led with raspi 3 (21/12/2020)
 ### Folder: updated_v2
  - Raspi 3 
@@ -35,10 +40,9 @@ As an amateur in Electronics, I welcome any contributions or criticism about my 
 ### Up comming features
  - [ ] Search music with voice
 
-Check out my code and documentation at folder MUSIC_LED/music_led.ino <br/>
 Demo Video: <br/>
-https://drive.google.com/file/d/1euAfPfX0qwzw--25zEl52kjKdtAcKfL8/view?usp=sharing <br/>
-https://drive.google.com/file/d/1FwyniIQ_AvyIb_1d-182hGVKnOJUUPfT/view?usp=sharing
+https://drive.google.com/file/d/1FrpFizum-_7GUAq3o5JTOA6LF3SM-bsk/view?usp=sharing
+
 
 
  
